@@ -1,0 +1,6 @@
+we will be using axios 
+error handeling
+Github Docs -- Docs for GitHub rest api, fetch user data 
+We will use axios instead of fetch api. 
+axios is a http library --> promise based HTTP client for browser and node.js.  
+Axios has better features, easier to use and error handeling in medium to small projects. 
