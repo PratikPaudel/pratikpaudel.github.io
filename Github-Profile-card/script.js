@@ -5,23 +5,24 @@ const form = document.getElementById('form')
 const find = document.getElementById('find')
 
 async function fetchUser(username) {
-         try {
+        try {
          const { data } = await axios.get(APIURL + username) 
         generateUserBlock(data)
         getRepos(username)
 } catch (err) {
-         if (err.reponse.status == 404) {
-                  generateErrorBlock ('Profile not found with this username :( ')
-         }
+    if(err.response.status == 404) {
+        generateErrorBlock ('Profile not found with this username :( ')
+    }
 }
 }
+
                   
 async function getRepos(username) {
-         try {
+    try{
          const { data } = await axios(APIURL + username + '/repos?sort=created') 
         addReposToBlock(data)
 } catch (err) {
-         generateErrorBlock('Error Fetching repository! :( ')
+    generateErrorBlock('Error fetching repository! :(')
 }
 }
 
