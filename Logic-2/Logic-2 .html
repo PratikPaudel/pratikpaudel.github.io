@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Codingbat.com: Logic2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Problem 1: makeBricks</h2>
+    <pre><code>
+public boolean makeBricks(int small, int big, int goal) {
+    if (small + big * 5 < goal)
+        return false;
+    if (goal % 5 > small)
+        return false;
+    return true;
+}
+    </code></pre>
+
+    <h2>Problem 2: loneSum</h2>
+    <pre><code>
+public int loneSum(int a, int b, int c) {
+    if (a == b && a == c) {
+        return 0;
+    }
+    if (a == b) {
+        return c;
+    }
+    if (b == c) {
+        return a;
+    }
+    if (c == a) {
+        return b;
+    }
+    return a + b + c;
+}
+    </code></pre>
+
+    <h2>Problem 3: luckySum</h2>
+    <pre><code>
+public int luckySum(int a, int b, int c) {
+    if ((a == 13 && c == 13) || (a == 13 && b == 13)) {
+        return 0;
+    }
+    if (a == 13) {
+        return 0;
+    }
+    if (b == 13) {
+        return a;
+    }
+    if (c == 13) {
+        return a + b;
+    }
+    return a + b + c;
+}
+    </code></pre>
+
+    <h2>Problem 4: noTeenSum</h2>
+    <pre><code>
+public int noTeenSum(int a, int b, int c) {
+    return fixTeen(a) + fixTeen(b) + fixTeen(c);
+}
+
+public int fixTeen(int n) {
+    if (n >= 13 && n <= 14 || n >= 17 && n <= 19) {
+        return 0;
+    }
+    return n;
+}
+    </code></pre>
+
+    <h2>Problem 5: roundSum</h2>
+    <pre><code>
+public int roundSum(int a, int b, int c) {
+    return round10(a) + round10(b) + round10(c);
+}
+
+public int round10(int num) {
+    if (num % 10 < 5 || num % 10 == 0) {
+        return (num / 10) * 10;
+    }
+    if (num % 10 >= 5) {
+        return ((num / 10) + 1) * 10;
+    }
+    return num;
+}
+    </code></pre>
+
+    <h2>Problem 6: closeFar</h2>
+    <pre><code>
+public boolean closeFar(int a, int b, int c) {
+    if (Math.abs(b - c) <= 1)
+        return false;
+    if (Math.abs(a - b) > 1)
+        return true;
+    if (Math.abs(a - c) > 1)
+        return true;
+    return false;
+}
+    </code></pre>
+
+    <h2>Problem 7: blackjack</h2>
+    <pre><code>
+public int blackjack(int a, int b) {
+    if (a > 21 && b > 21)
+        return 0;
+    if (a > 21 || b > 21) {
+        return Math.min(a, b);
+    }
+    return Math.max(a, b);
+}
+    </code></pre>
+
+    <h2>Problem 8: evenlySpaced</h2>
+    <pre><code>
+public boolean evenlySpaced(int a, int b, int c) {
+    int temp;
+    if (a > b) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    if (b > c) {
+        temp = b;
+        b = c;
+        c = temp;
+    }
+    if (a > b) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    return Math.abs(a - b) == Math.abs(b - c);
+}
+    </code></pre>
+
+    <h2>Problem 9: makeChocolate</h2>
+    <pre><code>
+public int makeChocolate(int small, int big, int goal) {
+    if (small + big * 5 < goal)
+        return -1;
+    if (goal - big * 5 >= 0) {
+        int n = goal - big * 5;
+        if (n <= small) {
+            return n;
+        }
+    } else {
+        int n = goal % 5;
+        if (n <= small) {
+            return n;
+        }
+    }
+    return -1;
+}
+    </code></pre>
+
+</body>
+
+</html>
