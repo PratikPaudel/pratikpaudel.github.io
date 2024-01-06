@@ -1,0 +1,314 @@
+header {
+    font-family: sans-serif;
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: height 0.3s;
+    z-index: 2;
+}
+body {
+    margin: 0;
+}
+
+header .header-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container h1 {
+    margin-top: 0;
+    font-size: 2rem;
+    line-height: 85px;
+    a {
+        color: ec9706;
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+    width: 40%;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 34px;
+    overflow: hidden; /* Ensure overflow is hidden for the border-radius to take effect */
+    position: relative;
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Adjust the transition properties */
+    padding: 10px 20px; /* Adjust the padding as needed */
+}
+
+header nav a:hover {
+    background-color: #ec9706;
+    padding: 10px 20px; /* Adjust the padding for the hover state */
+}
+
+.header-block video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.header-block {
+    display: flex;
+    min-height: 800px;
+    color: #ec9706;
+    line-height: 1;
+    background-image: url(images/Comp1.mp4); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+    .block-inner {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem 4rem;
+        justify-content: center;
+        background: rgba(0,0,0,.25);
+    }
+
+    .contents {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: none;
+        z-index: 2;
+    }
+
+    h1 {
+        margin: 0;
+        font-weight: 600;
+        font-variation-settings: 'wght' 600;
+        font-size: 350%;
+        font-size: 4.5vw;
+        letter-spacing: -.1rem;
+        max-width: 100%;
+    }
+
+    .divider {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    margin: 1rem 0 1rem 0; 
+
+    hr {
+        background: none;
+        border: 0;
+        border-top: 2px solid #ddd; 
+        margin: 0;
+    } 
+}
+
+.block-inner-2 {
+    padding: 0;
+    margin: 0;
+    background-image: url(images/bg1.jpeg);
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.text, .photo {
+    position: relative;
+    width: 50%;
+}
+
+.photo {
+    object-fit: cover;
+    height: 620px;
+    clip-path: none;
+    margin-top: -0rem;
+}
+
+.text {
+    width: 40%;
+    font-size: 140%;
+    padding-left: 5rem;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 600;
+    font-variation-settings: 'wght' 600;
+    margin-bottom: 1rem;
+    font-size: 350%;
+    color: #a80000;
+}
+strong {
+        color: #a80000;
+}
+
+
+.block-inner-3 {
+    padding: 0;
+    margin: 0;
+    background-image: url(images/bg1.png);
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    }
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+    background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
+    border-radius: 10px;
+    border: 1px solid #8F9092;
+    transition: all 0.2s ease;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #606060;
+    text-shadow: 0 1px #fff;
+
+    a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: black;
+    }
+  }
+  
+  button:hover {
+    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+  }
+
+.photo-2 {
+    object-fit: cover;
+    height: calc(100% + 1rem);
+    clip-path: none;
+    margin-top: -1rem;
+    border-radius: 5px;
+    img {
+        border-radius: 5px;
+    }
+}
+
+
+.text-2 {
+    width: 40%;
+    font-size: 145%;
+}
+
+.block-inner-4{
+    display: flex;
+    background-image: url(images/bg2.png);
+    backdrop-filter: blur(0.5);
+    position: relative;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+
+.block-inner-4 .bar {
+    background-color: #ec9706;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+.block-inner-4 .title {
+    font-size: 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: black;
+}
+
+.block-inner-4 .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+.block-actionbar-02 {
+    background-color: #ec9706;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0 2rem;
+}
+
+.block-inner-5 {
+    display: flex;
+    padding: 2rem 25rem;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+
+.block-inner-5 .social {
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.block-inner-5 .title {
+    font-variation-settings: 'wght' 800;
+    font-size: 2.5rem;
+    width: 45%;
+}
+
+.block-inner-5 .divider {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+    font-size: 3.5rem;
+    width: 10%;
+}
+
+.block-inner-5 a img{
+    border-radius: 10px;
+    color: white;
+}
