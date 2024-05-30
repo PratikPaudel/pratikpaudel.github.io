@@ -15,7 +15,7 @@ Modal windows are a common user interface pattern used to display content or mes
 
 ## Demo
 
-Check out the live demo [here](pratikpaudel.github.io/responsive-modal-dialog/index.html)
+Check out the live demo [here](https://pratikpaudel.github.io/responsive-modal-dialog/index.html)
 
 ## Technologies Used
 
