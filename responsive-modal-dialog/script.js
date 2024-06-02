@@ -1,3 +1,4 @@
+
 'use strict';
 const modal = document.querySelectorAll('.modal');
 const overlay = document.querySelector('.overlay');
@@ -33,9 +34,11 @@ overlay.addEventListener('click', function() {
   });
 
 document.addEventListener('keydown', function (e) {
-  // console.log(e.key);
-
-  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    closeModal();
-  }
+    if (e.key === 'Escape') {
+        for (let i = 0; i < modal.length; i++) {
+            if (!modal[i].classList.contains('hidden')) {
+                modalClose(i);
+            }
+        }
+    }
 });
