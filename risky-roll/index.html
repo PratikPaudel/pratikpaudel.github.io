@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer> </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <main class="background-main"> 
+        <heading> 
+        <text> <p> The goal is to be the first player to <strong> reach the target score. </strong> Points accumulate with each roll, but <strong> rolling a 1 ends your turn and cancels your current points.</strong> </p></text>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="20" class="slider" id="scoreSlider">
+            <p>Target Score: <span id="scoreValue"> </span></p>
+          </div>
+        </heading>
+          <div class="main-contents"> 
+            <div class="player-container"> 
+            <div class="player player--0 player--active"> 
+                <h1 class="player--0--winner"> </h1>
+                <h2> Player 1 </h2>
+                <p class="total-score" id="score--0"> Total Score: 0 </p>
+                <button>
+                    <p> Current Score </p>
+                    <p class="current-score" id="current--0"> 0 </p>    
+                </button>
+            </div>
+            
+            <div class="player player--1"> 
+                <h1 class="player--1--winner"> </h1>
+                <h2> Player 2 </h2>
+                <p class="total-score" id="score--1"> Total Score: 0 </p>
+                <button>
+                    <p> Current Score </p>
+                    <p class="current-score" id="current--1"> 0 </p>    
+                </button>
+            </div>
+        </div>
+            <div class="buttons"> 
+                <button class="reset-game"> New game </button>
+                <img class="diceImage hidden shaking" src="asset/dice-1.svg"> 
+                <button class="roll-dice"> Roll Dice </button>
+                <button class="hold"> Hold </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

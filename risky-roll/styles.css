@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+.background-main {
+  position: relative;
+  height: 55rem;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.background-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.2; 
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(0deg, #8b0c0c, #8b0c0c 1px, #ffffff 1px, #ffffff);
+}
+main text p {
+  width: 550px;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.player-container {
+  display: flex;
+  gap: 10rem;
+  justify-content: space-between;
+  width: 100%;
+}
+main .player h1 {
+  color: green;
+}
+
+.player {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.player button {
+  outline: none !important;
+  padding: 0 !important;
+}
+/* Media query for small devices */
+@media (max-width: 600px) {
+  .main-contents {
+    flex-direction: column;
+    padding: 0 2rem !important;
+    margin: 0 !important;
+  }
+  .player{
+    width: 40%;
+    display: row;
+  }
+  .buttons {
+    width: 100%;
+    order: -1;
+    display: flex;
+    position: relative !important;
+    gap: 1rem !important;
+  }
+  .buttons .diceImage {
+    margin: 0 auto;
+  }
+  .player button {
+    all: unset;
+    padding-bottom: 0.25rem !important;
+  }
+  .player-container {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .total-score {
+    width: 5rem !important;
+    height: 5rem !important;
+    padding: 0;
+    margin: 0;
+  }
+  .total-score::after {
+    inset: 0.25rem !important;
+  }
+  .player .total-score span {
+    font-size: 2rem;
+  }
+  .player {
+    padding: 0;
+    margin: 0;
+  }
+
+  heading text p {
+    width: 350px;
+  }
+  .buttons img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .buttons button {
+    width: 60% !important;
+    margin: 0 auto !important;
+    padding: 0.25rem !important;
+    font-size: 0.9rem !important;
+    min-height: 40px !important;
+  }
+}
+
+.main-contents .player .total-score {
+  position: relative;
+}
+
+:root {
+  --rating-size: 10rem;
+  --bar-size: 1rem;
+  --background-color: #e7f2fa;
+  --rating-color-default: #2980b9;
+  --rating-color-background: #c7e1f3;
+  --rating-color-good: #27ae60;
+  --rating-color-meh: #f1c40f;
+  --rating-color-bad: #e74c3c;
+}
+
+/* Rating item */
+.total-score {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  overflow: hidden;
+  
+  background: var(--rating-color-default);
+  color: var(--rating-color-default);
+  width: var(--rating-size);
+  height: var(--rating-size);
+
+  /* Basic style for the text */
+  font-size: calc(var(--rating-size) / 3);
+  line-height: 1;
+}
+
+/* Rating circle content */
+.total-score span {
+  position: relative;
+  display: flex;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Bar mask, creates an inner circle with the same color as thee background */
+.total-score::after {
+  content: "";
+  position: absolute;
+  inset: var(--bar-size);
+  background: var(--background-color);
+  border-radius: inherit;
+  z-index: 1;
+}
+
+/* Bar background */
+.total-score::before {
+  content: "";
+  position: absolute;
+  inset: var(--bar-size);
+  border-radius: inherit;
+  box-shadow: 0 0 0 1rem var(--rating-color-background);
+  z-index: -1;
+}
+
+/* Classes to give different colors to ratings, based on their score */
+.total-score .good {
+  background: green;
+  color: green;
+}
+
+.total-score .meh {
+  background: orange;
+  color: orange;
+}
+
+.total-score .bad {
+  background: red;
+  color: red;
+}
+
+
+.player button {
+  all: unset;
+  text-align: center;
+  outline: 1px black dashed;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.buttons {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.buttons img{
+  width: 150px;
+  height: 150px;
+}
+.buttons button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.buttons button:disabled {
+  pointer-events: none;
+}
+
+.buttons button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.buttons button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.shaking {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  10% { transform: translate(-2px, -2px) rotate(-10deg); }
+  20% { transform: translate(2px, -2px) rotate(10deg); }
+  30% { transform: translate(-2px, 2px) rotate(-10deg); }
+  40% { transform: translate(2px, 2px) rotate(10deg); }
+  50% { transform: translate(-2px, -2px) rotate(-10deg); }
+  60% { transform: translate(2px, -2px) rotate(10deg); }
+  70% { transform: translate(-2px, 2px) rotate(-10deg); }
+  80% { transform: translate(2px, 2px) rotate(10deg); }
+  90% { transform: translate(-2px, -2px) rotate(-10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
