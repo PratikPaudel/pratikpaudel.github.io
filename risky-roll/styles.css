@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 .background-main {
   position: relative;
-  height: 50rem;
+  height: 45rem;
   z-index: 1;
   display: flex;
   justify-content: center;
