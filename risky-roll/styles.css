@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 .background-main {
   position: relative;
-  height: 45rem;
+  height: 46rem;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -60,69 +60,6 @@ main .player h1 {
 .player button {
   outline: none !important;
   padding: 0 !important;
-}
-/* Media query for small devices */
-@media (max-width: 600px) {
-  .main-contents {
-    flex-direction: column;
-    padding: 0 2rem !important;
-    margin: 0 !important;
-  }
-  .player{
-    width: 40%;
-    display: row;
-  }
-  .buttons {
-    width: 100%;
-    order: -1;
-    display: flex;
-    position: relative !important;
-    gap: 1rem !important;
-  }
-  .buttons .diceImage {
-    margin: 0 auto;
-  }
-  .player button {
-    all: unset;
-    padding-bottom: 0.25rem !important;
-  }
-  .player-container {
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    width: 100%;
-  }
-  .total-score {
-    width: 5rem !important;
-    height: 5rem !important;
-    padding: 0;
-    margin: 0;
-  }
-  .total-score::after {
-    inset: 0.25rem !important;
-  }
-  .player .total-score span {
-    font-size: 2rem;
-  }
-  .player {
-    padding: 0;
-    margin: 0;
-  }
-
-  heading text p {
-    width: 350px;
-  }
-  .buttons img {
-    width: 90px !important;
-    height: 90px !important;
-  }
-  .buttons button {
-    width: 60% !important;
-    margin: 0 auto !important;
-    padding: 0.25rem !important;
-    font-size: 0.9rem !important;
-    min-height: 40px !important;
-  }
 }
 
 .main-contents .player .total-score {
@@ -291,3 +228,72 @@ main .player h1 {
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 
+/* Media query for small devices */
+@media (max-width: 600px) {
+  .main-contents {
+    flex-direction: column;
+    padding: 0 2rem !important;
+    margin: 0 !important;
+  }
+  .player{
+    width: 40%;
+    h2 {
+      margin-top: 0;
+    }
+  }
+  .buttons {
+    width: 100%;
+    order: -1;
+    display: flex;
+    position: relative !important;
+    gap: 1rem !important;
+  }
+  .buttons .diceImage {
+    margin: 0 auto;
+  }
+  .player button {
+    all: unset;
+    padding-bottom: 0.25rem !important;
+  }
+  .player-container {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .total-score {
+    width: 4rem !important;
+    height: 4rem !important;
+    padding: 0;
+    margin: 0;
+  }
+  .total-score::after {
+    inset: 0.25rem !important;
+  }
+  .player .total-score span {
+    font-size: 2rem;
+  }
+  .player {
+    padding: 0;
+    margin: 0;
+  }
+
+  heading text p {
+    width: 350px;
+    font-size: 0.9rem;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+
+  }
+  .buttons img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  .buttons button {
+    width: 60% !important;
+    margin: 0 auto !important;
+    padding: 0.25rem !important;
+    font-size: 0.9rem !important;
+    min-height: 40px !important;
+  }
+}
